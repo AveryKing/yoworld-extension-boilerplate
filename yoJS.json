@@ -4,7 +4,7 @@
     "priority": 1,
     "action": {
       "redirect": {
-        "url": "Put your YoVilleApp mod url here"
+        "url": "https://averyking.github.io/yoworld-extension-boilerplate/YoVilleApp.js"
       },
       "type": "redirect"
     },
