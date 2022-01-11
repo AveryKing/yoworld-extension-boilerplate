@@ -1,20 +1,18 @@
-
-/** This code is injected into the page and serves as a middle-man
- *   for communicating between the extension and the iFrame on the page
+/** This listener is injected into the page and serves as a middle-man
+ *   for communicating between the extension and YoVilleApp
  */
-chrome.runtime.sendMessage({}, function (response) {
-    const readyStateCheckInterval = setInterval(function () {
+chrome.runtime.sendMessage({}, (response) => {
+    const readyStateCheckInterval = setInterval(() => {
         if (document.readyState === "complete") {
             clearInterval(readyStateCheckInterval);
             chrome.runtime.onMessage.addListener(
-                function (payload, sender, sendResponse) {
-                    /** Replace IFRAME ID with the ID of iFrame you are injecting **/
-                    let frame = document.getElementById('IFRAME ID').contentWindow;
-                    frame.postMessage(payload, '*')
+                (yoPayload, sender, sendResponse) => {
+                    let yoworld = document.getElementById('iframe_canvas').contentWindow;
+                    yoworld.postMessage(yoPayload, '*')
                     return true;
                 }
             );
-            window.onmessage = function (response) {
+            window.onmessage = (response) => {
                 chrome.runtime.sendMessage(response.data);
             }
         }

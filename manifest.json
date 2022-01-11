@@ -1,12 +1,16 @@
 {
-  "name": "Chrome iFrame Communicator",
+  "name": "YoWorld Chrome Template",
   "version": "0.0.1",
   "manifest_version": 3,
-  "description": "Template communicating between chrome extension and an iframe.",
+  "description": "Template for communicating between chrome and YoWorld",
   "background": {
     "service_worker": "service_worker.js",
     "type": "module"
-
+  },
+  "icons": {
+    "16": "yo.png",
+    "48": "yo.png",
+    "128": "yo.png"
   },
   "permissions": [
     "tabs",

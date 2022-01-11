@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "redirect": {
+        "url": "YOUR JS FILE URL HERE"
+      },
+      "type": "redirect"
+    },
+    "condition": {
+      "urlFilter": "https://yw-web.yoworld.com/flash/bin-debug/YoVilleApp.js",
+      "resourceTypes": [
+        "main_frame",
+        "script"
+      ]
+    }
+  }
+]
