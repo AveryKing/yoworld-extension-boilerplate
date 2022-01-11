@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>YoWorld Extension Template</title>
-    <script src="popup.js"></script>
+    <script type="module" src="popup.js"></script>
+    <style>
+        form {
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-top:-10px;
+        }
+        button {
+            border-radius:8px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    </style>
 </head>
 <body>
 <center>
     <h2>YoWorld Extension Template</h2>
     <br/>
-    <p>Enter a message and click send</p>
-    <br/>
+    <p>Click the button to send a popup message.</p>
+    <br/><br/>
     <form>
-        <label>
-            <input type="text" id="message">
-        </label>
         <button id="send-message">Send</button>
     </form>
 </center>

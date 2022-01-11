@@ -1,9 +1,8 @@
-import yoService from './service_worker.js';
 
-let message = document.getElementById('message').value
+/*** JS for the popup page ***/
+import yoService from './service_worker.js';
 document.getElementById('send-message').onclick = async () => {
     await yoService.sendRequest({
-        cmd: 'showMessage',
-        message: message
+        cmd: 'showMessage'
     })
 }

@@ -4,7 +4,7 @@
     "priority": 1,
     "action": {
       "redirect": {
-        "url": "YOUR JS FILE URL HERE"
+        "url": "Put your YoVilleApp mod url here"
       },
       "type": "redirect"
     },
